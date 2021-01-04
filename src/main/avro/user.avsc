@@ -1,0 +1,62 @@
+[
+  {
+    "namespace": "my.study.model",
+    "type": "enum",
+    "name": "WorkDomain",
+    "symbols": [
+      "IT",
+      "ECONOMY",
+      "CULTURE"
+    ],
+    "default": "CULTURE"
+  },
+  {
+    "namespace": "my.study.model",
+    "type": "record",
+    "name": "Work",
+    "fields": [
+      {
+        "name": "name",
+        "type": "string"
+      },
+      {
+        "name": "domain",
+        "type": "WorkDomain"
+      }
+    ]
+  },
+  {
+    "namespace": "my.study.model",
+    "type": "record",
+    "name": "User",
+    "aliases": [
+      "PersonEntry",
+      "Person"
+    ],
+    "fields": [
+      {
+        "name": "name",
+        "type": "string"
+      },
+      {
+        "name": "favorite_number",
+        "type": [
+          "int",
+          "null"
+        ]
+      },
+      {
+        "name": "favorite_color",
+        "type": [
+          "string",
+          "null"
+        ]
+      },
+      {
+        "type": "Work",
+        "name": "placeOfWork"
+      }
+    ]
+  }
+]
+
